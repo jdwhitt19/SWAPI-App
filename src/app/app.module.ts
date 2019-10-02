@@ -12,8 +12,11 @@ import {MatInputModule} from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
-import {MatMenuModule} from '@angular/material/menu';
+// import {MatMenuModule} from '@angular/material/menu';
+import {MatSelectModule} from '@angular/material/select';
 
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import {MatTreeModule} from '@angular/material/tree';
 
 
 @NgModule({
@@ -31,9 +34,12 @@ import {MatMenuModule} from '@angular/material/menu';
     FormsModule,
     MatIconModule,
     MatButtonModule,
-    MatMenuModule
+    // MatMenuModule,
+    MatSelectModule,
+    MatTreeModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
