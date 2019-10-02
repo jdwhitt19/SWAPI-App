@@ -1,13 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-// import { Observable, Subject } from 'rxjs';
-
-// import {
-//    debounceTime, distinctUntilChanged, switchMap
-//  } from 'rxjs/operators';
-
 import { SwapiService } from '../swapi.service';
-import { HttpClient } from '@angular/common/http';
 
 
 export interface SearchType {
@@ -22,25 +14,31 @@ export interface SearchType {
 })
 
 export class SearchComponent implements OnInit {
+  public results: any = [];
 
-  url: string  = 'https://swapi.co/api/people/1';
-
-  results: any;
-
+  
+  constructor(private _swapiService: SwapiService) {}
+  
   searchTypes: SearchType[] = [
     {value: 'people', viewValue: 'People'},
     {value: 'ships', viewValue: 'Ships'},
     {value: 'films', viewValue: 'Films'}
   ];
-
-  constructor(private http: HttpClient) { }
-
-  getResults(searchTerm) {
-    this.results = this.http.get(this.url)
-    console.log(searchTerm);
+  
+  search(query){
+    this._swapiService.getResults(this.sType, query)
+      .subscribe(data => {this.results = data['results']; console.log(data['results'])})
   }
 
+  public sType: string = '';
+
+  setSearchType(type){
+    this.sType = type
+  }
+
+
   ngOnInit() {
+
   }
 
 }

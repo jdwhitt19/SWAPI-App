@@ -12,11 +12,11 @@ import {MatInputModule} from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
-// import {MatMenuModule} from '@angular/material/menu';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {MatTreeModule} from '@angular/material/tree';
+import { SwapiService } from './swapi.service';
 
 
 @NgModule({
@@ -34,12 +34,11 @@ import {MatTreeModule} from '@angular/material/tree';
     FormsModule,
     MatIconModule,
     MatButtonModule,
-    // MatMenuModule,
     MatSelectModule,
     MatTreeModule,
     HttpClientModule
   ],
-  providers: [HttpClient],
+  providers: [HttpClient, SwapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
