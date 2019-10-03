@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { SwapiService } from '../swapi.service';
 
 
-
-
-
 export interface SearchType {
   value: string;
   viewValue: string;
@@ -18,7 +15,6 @@ export interface SearchType {
 
 export class SearchComponent implements OnInit {
   public results: any = [];
-  panelOpenState = false;
 
   
   constructor(private _swapiService: SwapiService) {}
@@ -29,16 +25,19 @@ export class SearchComponent implements OnInit {
     {value: 'films', viewValue: 'Films'}
   ];
   
+  public selected: string = 'people';
+
   search(query){
     this._swapiService.getResults(this.sType, query)
       .subscribe(data => {this.results = data['results']; console.log(data['results'])})
   }
 
-  public sType: string = '';
+  public sType: string = 'people';
 
   setSearchType(type){
     this.sType = type
   }
+
 
 
   ngOnInit() {

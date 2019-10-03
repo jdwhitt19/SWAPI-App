@@ -17,8 +17,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {MatTreeModule} from '@angular/material/tree';
 import { SwapiService } from './swapi.service';
+import {MatListModule} from '@angular/material/list';
 
-import {AppMaterialModule} from './app.material.modul'
 
 
 @NgModule({
@@ -38,8 +38,8 @@ import {AppMaterialModule} from './app.material.modul'
     MatButtonModule,
     MatSelectModule,
     MatTreeModule,
-    HttpClientModule,
-    AppMaterialModule
+    MatListModule,
+    HttpClientModule
   ],
   providers: [HttpClient, SwapiService],
   bootstrap: [AppComponent]
