@@ -25,16 +25,19 @@ export class SearchComponent implements OnInit {
     {value: 'films', viewValue: 'Films'}
   ];
   
+  public selected: string = 'people';
+
   search(query){
     this._swapiService.getResults(this.sType, query)
       .subscribe(data => {this.results = data['results']; console.log(data['results'])})
   }
 
-  public sType: string = '';
+  public sType: string = 'people';
 
   setSearchType(type){
     this.sType = type
   }
+
 
 
   ngOnInit() {
