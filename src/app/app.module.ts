@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { AppMaterialModule } from './app.material.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,12 +15,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     DashboardComponent,
     SearchComponent,
-    DetailsComponent
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    AppMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

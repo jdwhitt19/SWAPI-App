@@ -1,1 +1,41 @@
-<p>details works!</p>
+<!-- <p>details works!</p> -->
+
+<!-- <input #searchBox id="search-box" (input)="getDetails(searchBox.value)" /> -->
+
+<input #searchBox id="search-box" (input)="getDetails(searchBox.value, dropBox.value)" />
+
+<select  #dropBox id="drop-box" (input)="getDetails(searchBox.value, dropBox.value)">
+   <option value="people">People</option>
+   <option value="starships">Ships</option>
+   <option value="films">Films</option>
+ </select>
+
+ 
+ <div *ngFor="let detail of details">
+     <mat-list>
+         <mat-list-item *ngIf='detail.name'>Name: {{detail.name}}</mat-list-item>
+         <mat-list-item *ngIf='detail.birth_year'>Birth Year: {{detail.birth_year}}</mat-list-item>
+         <mat-list-item *ngIf='detail.gender'>Gender: {{detail.gender}}</mat-list-item>
+         <mat-list-item *ngIf='detail.height'>Height(cm): {{detail.height}}</mat-list-item>
+         <mat-list-item *ngIf='detail.mass'>Mass(kg): {{detail.mass}}</mat-list-item>
+         <mat-list-item *ngIf='detail.eye_color'>Eye Color: {{detail.eye_color}}</mat-list-item>
+         <mat-list-item *ngIf='detail.hair_color'>Hair Color: {{detail.hair_color}}</mat-list-item>
+     </mat-list>
+ </div>
+
+<!-- {
+    drop-box.value === 'People' ? 
+    <div *ngFor="let detail of details">
+        <p>Name: {{detail.name}}</p>
+        <p>Eye Color: {{detail.eye_color}}</p>
+        <p></p>
+    </div> :
+    drop-box.value === 'Ships' ?
+    <div *ngFor="let detail of details">
+        <p>Name: {{detail.name}}</p>
+    </div> :
+    drop-box.value === 'Films' ?
+    <div *ngFor="let detail of details">
+        <p>Name: {{detail.title}}</p>
+    </div>
+} -->
