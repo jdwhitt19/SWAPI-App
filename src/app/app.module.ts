@@ -8,6 +8,19 @@ import { SearchComponent } from './search/search.component';
 import { DetailsComponent } from './details/details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {MatInputModule} from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import {MatTreeModule} from '@angular/material/tree';
+import { SwapiService } from './swapi.service';
+
+import {AppMaterialModule} from './app.material.modul'
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +31,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    FormsModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatTreeModule,
+    HttpClientModule,
+    AppMaterialModule
   ],
-  providers: [],
+  providers: [HttpClient, SwapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

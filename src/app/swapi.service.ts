@@ -1,9 +1,20 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { IPeople } from './people';
+import { Observable } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class SwapiService {
 
-  constructor() { }
+  private _url: string = `https://swapi.co/api/`
+
+  constructor(private http: HttpClient) {}
+
+  getResults(type, query): Observable<IPeople[]> {
+    console.log('type: ', type)
+    if(type == 'people'){return this.http.get<IPeople[]>(this._url + 'people/?search=' + query)}
+    else if(type == 'ships'){return this.http.get<IPeople[]>(this._url + 'starships/?search=' + query)}
+    else if(type == 'films'){return this.http.get<IPeople[]>(this._url + 'films/?search=' + query)};
+
+  }
 }
