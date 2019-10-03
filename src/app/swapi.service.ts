@@ -1,23 +1,11 @@
 import { Injectable } from '@angular/core';
-<<<<<<< HEAD
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-=======
 import { HttpClient } from '@angular/common/http';
 import { IPeople } from './people';
 import { Observable } from 'rxjs';
->>>>>>> 2013e159b1d0647527ce6842751f08e37c2d95d1
 
 @Injectable()
 export class SwapiService {
 
-<<<<<<< HEAD
-  constructor(public httpClient: HttpClient) { }
-
-   getDetails(term, dropdown) {
-    return this.httpClient.get(`https://swapi.co/api/${dropdown}/?search=${term}`)
-  }
-}
-=======
   private _url: string = `https://swapi.co/api/`
 
   constructor(private http: HttpClient) {}
@@ -30,4 +18,3 @@ export class SwapiService {
 
   }
 }
->>>>>>> 2013e159b1d0647527ce6842751f08e37c2d95d1
