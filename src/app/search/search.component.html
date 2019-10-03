@@ -1,3 +1,8 @@
+<h3>Star Wars Search</h3>
+
+<!-- <input matInput placeholder="Search" type="search" /> -->
+
+<!-- <input #searchBox id="search-box" (input)="getDetails(searchBox.value)" /> -->
 <div class="search">
   <mat-form-field class="dropdown">
     <mat-label>Search type</mat-label>
@@ -18,6 +23,12 @@
 </div>
 
 <div class="details" *ngIf="results">
+    <ul *ngFor="let result of results">
+        <li>{{result.name}}</li>
+        <li *ngIf='result.gender'>{{result.gender}}</li>
+        <li *ngIf='result.model'>{{result.model}}</li>
+    </ul>
+</div>
     <mat-list *ngFor="let result of results" class='list'>
         <mat-list-item *ngIf='result.name' class='result-name'>{{result.name}}</mat-list-item>
         <mat-list-item *ngIf='result.gender'>Gender: {{ result.gender | titlecase }}</mat-list-item>
