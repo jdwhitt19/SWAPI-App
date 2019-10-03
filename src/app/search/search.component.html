@@ -38,9 +38,9 @@
         <mat-list-item *ngIf='result.producer'>Producer: {{ result.producer }}</mat-list-item>
         
         <mat-list-item *ngIf='result.model'>Ship Model: {{ result.model }}</mat-list-item>
-        <mat-list-item  *ngIf='result.manufacturer'>Manufacturer: {{result.manufacturer}}</mat-list-item >
-        <mat-list-item  *ngIf='result.crew'>Crew Required: {{result.crew}}</mat-list-item >
-        <mat-list-item  *ngIf='result.cost_in_credits'>Manufacturing Cost: {{result.cost_in_credits}} credits</mat-list-item >
+        <mat-list-item *ngIf='result.manufacturer'>Manufacturer: {{result.manufacturer}}</mat-list-item >
+        <mat-list-item *ngIf='result.crew'>Crew Required: {{result.crew | number }}</mat-list-item >
+        <mat-list-item *ngIf="result.cost_in_credits"><span>Manufacturing Cost: <img src='../../assets/swcredit.png'></span> {{  result.cost_in_credits === 'unknown' ? '?' : result.cost_in_credits | number }} </mat-list-item >
     </mat-list>
   </div>
 
