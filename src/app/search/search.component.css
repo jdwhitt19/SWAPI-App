@@ -12,3 +12,20 @@
 .input {
     width: 30vw;
 }
+
+.details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list {
+    margin-top: 1em;
+    border-top: solid 1px #949494;
+    width: 35em;
+}
+
+.result-name {
+    font-weight: bold;
+}
