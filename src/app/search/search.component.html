@@ -20,7 +20,7 @@
 <div class="details" *ngIf="results">
     <mat-list *ngFor="let result of results" class='list'>
         <mat-list-item *ngIf='result.name' class='result-name'>{{result.name}}</mat-list-item>
-        <mat-list-item *ngIf='result.title' class='result-name'>Film Title: {{ result.title }}</mat-list-item>
+        <mat-list-item *ngIf='result.title' class='result-name'>{{ result.title }}</mat-list-item>
         <mat-list-item *ngIf='result.gender'>Gender: {{ result.gender | titlecase }}</mat-list-item>
         <mat-list-item *ngIf='result.model'>Ship Model: {{ result.model }}</mat-list-item>
         <mat-list-item *ngIf='result.episode_id'>Episode Number: {{ result.episode_id }}</mat-list-item>
