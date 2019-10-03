@@ -15,7 +15,6 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { SwapiService } from './swapi.service';
 import { AppMaterialModule } from './app.material.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
