@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { AppMaterialModule } from './app.material.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,8 +16,8 @@ import { MatButtonModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import {MatTreeModule} from '@angular/material/tree';
+import { HttpClient } from '@angular/common/http';
+import { MatTreeModule } from '@angular/material/tree';
 import { SwapiService } from './swapi.service';
 import {MatListModule} from '@angular/material/list';
 
@@ -26,20 +28,21 @@ import {MatListModule} from '@angular/material/list';
     AppComponent,
     DashboardComponent,
     SearchComponent,
-    DetailsComponent
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    AppMaterialModule,
     MatInputModule,
     FormsModule,
     MatIconModule,
     MatButtonModule,
     MatSelectModule,
     MatTreeModule,
-    MatListModule,
-    HttpClientModule
+    MatListModule
   ],
   providers: [HttpClient, SwapiService],
   bootstrap: [AppComponent]
