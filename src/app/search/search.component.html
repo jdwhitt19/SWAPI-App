@@ -33,7 +33,7 @@
         <mat-list-item *ngIf='result.hair_color'>Hair Color: {{result.hair_color | titlecase}}</mat-list-item>
 
         <mat-list-item *ngIf='result.episode_id'>Episode Number: {{ result.episode_id }}</mat-list-item>
-        <mat-list-item *ngIf='result.release_date'>Release Date: {{ result.release_date }}</mat-list-item>
+        <mat-list-item *ngIf='result.release_date'>Release Date: {{ result.release_date | date }}</mat-list-item>
         <mat-list-item *ngIf='result.director'>Director: {{ result.director }}</mat-list-item>
         <mat-list-item *ngIf='result.producer'>Producer: {{ result.producer }}</mat-list-item>
         
