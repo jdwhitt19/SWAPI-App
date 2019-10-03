@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SwapiService } from '../swapi.service';
 
 @Component({
   selector: 'app-details',
@@ -8,17 +7,15 @@ import { SwapiService } from '../swapi.service';
 })
 export class DetailsComponent implements OnInit {
 
-  details: any;
+  constructor() { }
 
-  constructor(private swapiService: SwapiService) { }
-
-  getDetails(term: string, dropdown: string): void {
-    this.swapiService.getDetails(term, dropdown)
-    .subscribe((data) => {
-      console.log(data);
-      this.details = data['results'];
-    });
- }
+//   getDetails(term: string, dropdown: string): void {
+//     this.swapiService.getResults(term, dropdown)
+//     .subscribe((data) => {
+//       console.log(data);
+//       this.details = data['results'];
+//     });
+//  }
 
   ngOnInit() {
     // this.swapiService.getDetails().subscribe((data) => {
