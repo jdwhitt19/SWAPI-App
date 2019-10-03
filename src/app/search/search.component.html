@@ -22,15 +22,15 @@
 
 <div class="details" *ngIf="results">
   <mat-list *ngFor="let result of results" class='list'>
-        <mat-list-item *ngIf='result.name' class='result-name'>{{result.name}}</mat-list-item>
+        <mat-list-item *ngIf='result.name' class='result-name'>{{result.name.toUpperCase()}}</mat-list-item>
         <mat-list-item *ngIf='result.title' class='result-name'>{{ result.title }}</mat-list-item>
 
         <mat-list-item *ngIf='result.birth_year'>Birth Year: {{result.birth_year}}</mat-list-item>
-        <mat-list-item *ngIf='result.gender'>Gender: {{result.gender | titlecase}}</mat-list-item>
+        <mat-list-item *ngIf='result.gender'>Gender: {{result.gender === 'n/a' ? '404 Not Found' : result.gender | titlecase}}</mat-list-item>
         <mat-list-item *ngIf='result.height'>Height: {{result.height}}cm</mat-list-item>
         <mat-list-item *ngIf='result.mass'>Mass: {{result.mass}}kg</mat-list-item>
         <mat-list-item *ngIf='result.eye_color'>Eye Color: {{result.eye_color | titlecase}}</mat-list-item>
-        <mat-list-item *ngIf='result.hair_color'>Hair Color: {{result.hair_color | titlecase}}</mat-list-item>
+        <mat-list-item *ngIf='result.hair_color'>Hair Color: {{result.hair_color === 'n/a' ? '404 Not Found' : result.hair_color === 'none' ? 'Did not have the high ground' : result.hair_color | titlecase}}</mat-list-item>
 
         <mat-list-item *ngIf='result.episode_id'>Episode Number: {{ result.episode_id }}</mat-list-item>
         <mat-list-item *ngIf='result.release_date'>Release Date: {{ result.release_date | date }}</mat-list-item>
