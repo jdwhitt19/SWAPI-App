@@ -21,7 +21,7 @@
 </div>
 
 <div class="details" *ngIf="results">
-    <mat-list *ngFor="let result of results" class='list'>
+  <mat-list *ngFor="let result of results" class='list'>
         <mat-list-item *ngIf='result.name' class='result-name'>{{result.name}}</mat-list-item>
         <mat-list-item *ngIf='result.title' class='result-name'>{{ result.title }}</mat-list-item>
 
@@ -42,4 +42,5 @@
         <mat-list-item  *ngIf='result.crew'>Crew Required: {{result.crew}}</mat-list-item >
         <mat-list-item  *ngIf='result.cost_in_credits'>Manufacturing Cost: {{result.cost_in_credits}} credits</mat-list-item >
     </mat-list>
-</div>
+  </div>
+
