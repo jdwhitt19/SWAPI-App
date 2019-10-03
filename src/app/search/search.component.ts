@@ -28,7 +28,7 @@ export class SearchComponent implements OnInit {
   public selected: string = 'people';
 
   search(query){
-    this._swapiService.getResults(this.sType, query)
+    this._swapiService.getResults(this.sType, query ? query : '')
       .subscribe(data => {this.results = data['results']; console.log(data['results'])})
   }
 
