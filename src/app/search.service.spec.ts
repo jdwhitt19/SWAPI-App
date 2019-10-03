@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SwapiService } from './swapi.service';
+import { SearchService } from './search.service';
 
-describe('SwapiService', () => {
+describe('SearchService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: SwapiService = TestBed.get(SwapiService);
+    const service: SearchService = TestBed.get(SearchService);
     expect(service).toBeTruthy();
   });
 });

@@ -20,13 +20,15 @@
   <button mat-button matSuffix (click)='search(query)'>Search</button>
 </div>
 
-<mat-list *ngFor="let result of results" class='list'>
-  <mat-list-item *ngIf='result.name' class='result-name'>{{result.name}}</mat-list-item>
-  <mat-list-item *ngIf='result.title' class='result-name'>Film Title: {{ result.title }}</mat-list-item>
-  <mat-list-item *ngIf='result.gender'>Gender: {{ result.gender | titlecase }}</mat-list-item>
-  <mat-list-item *ngIf='result.model'>Ship Model: {{ result.model }}</mat-list-item>
-  <mat-list-item *ngIf='result.episode_id'>Episode Number: {{ result.episode_id }}</mat-list-item>
-  <mat-list-item *ngIf='result.release_date'>Release Date: {{ result.release_date }}</mat-list-item>
-  <mat-list-item *ngIf='result.director'>Director: {{ result.director }}</mat-list-item>
-  <mat-list-item *ngIf='result.producer'>Producer: {{ result.producer }}</mat-list-item>
-</mat-list>
+<div class="details" *ngIf="results">
+    <mat-list *ngFor="let result of results" class='list'>
+        <mat-list-item *ngIf='result.name' class='result-name'>{{result.name}}</mat-list-item>
+        <mat-list-item *ngIf='result.title' class='result-name'>{{ result.title }}</mat-list-item>
+        <mat-list-item *ngIf='result.gender'>Gender: {{ result.gender | titlecase }}</mat-list-item>
+        <mat-list-item *ngIf='result.model'>Ship Model: {{ result.model }}</mat-list-item>
+        <mat-list-item *ngIf='result.episode_id'>Episode Number: {{ result.episode_id }}</mat-list-item>
+        <mat-list-item *ngIf='result.release_date'>Release Date: {{ result.release_date }}</mat-list-item>
+        <mat-list-item *ngIf='result.director'>Director: {{ result.director }}</mat-list-item>
+        <mat-list-item *ngIf='result.producer'>Producer: {{ result.producer }}</mat-list-item>
+    </mat-list>
+</div>

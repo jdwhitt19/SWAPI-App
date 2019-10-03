@@ -9,19 +9,7 @@ export class DetailsComponent implements OnInit {
 
   constructor() { }
 
-//   getDetails(term: string, dropdown: string): void {
-//     this.swapiService.getResults(term, dropdown)
-//     .subscribe((data) => {
-//       console.log(data);
-//       this.details = data['results'];
-//     });
-//  }
-
   ngOnInit() {
-    // this.swapiService.getDetails().subscribe((data) => {
-    //   console.log(data);
-    //   this.details = data['results'];
-    // });
   }
 
 }
