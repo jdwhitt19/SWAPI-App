@@ -21,6 +21,12 @@
 </div>
 
 <div class="details" *ngIf="results">
+    <ul *ngFor="let result of results">
+        <li>{{result.name}}</li>
+        <li *ngIf='result.gender'>{{result.gender}}</li>
+        <li *ngIf='result.model'>{{result.model}}</li>
+    </ul>
+</div>
     <mat-list *ngFor="let result of results" class='list'>
         <mat-list-item *ngIf='result.name' class='result-name'>{{result.name}}</mat-list-item>
         <mat-list-item *ngIf='result.title' class='result-name'>{{ result.title }}</mat-list-item>
