@@ -1,3 +1,3 @@
 export interface Swapi {
-    data: any
+    data: any //???
 }
