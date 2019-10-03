@@ -3,6 +3,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    background-color: white;
+    padding: 1em;
 }
 
 .dropdown {
@@ -19,12 +21,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: white;
 }
 
 .list {
     margin-top: 1em;
     border-top: solid 1px #949494;
     width: 50em;
+    padding: 1em;
 }
 
 .result-name {

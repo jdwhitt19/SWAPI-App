@@ -1,7 +1,10 @@
 .jumbotron {
     text-align: center;
     font-size: 6em;
-    margin-top: 15vh;
+    /* padding-top: 15vh; */
     font-weight: 100;
     letter-spacing: 0.2em;
+    margin-top: 0;
+    background-color: white;
+    max-width: 50vw;
 }
