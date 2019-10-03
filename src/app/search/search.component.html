@@ -22,7 +22,7 @@
 
 <div class="details" *ngIf="results">
   <mat-list *ngFor="let result of results" class='list'>
-        <mat-list-item *ngIf='result.name' class='result-name'>{{result.name}}</mat-list-item>
+        <mat-list-item *ngIf='result.name' class='result-name'>{{result.name.toUpperCase()}}</mat-list-item>
         <mat-list-item *ngIf='result.title' class='result-name'>{{ result.title }}</mat-list-item>
 
         <mat-list-item *ngIf='result.birth_year'>Birth Year: {{result.birth_year}}</mat-list-item>

@@ -19,15 +19,17 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-weight: 100;
 }
 
 .list {
     margin-top: 1em;
     border-top: solid 1px #949494;
-    width: 50em;
+    width: 38em;
 }
 
 .result-name {
-    font-weight: bold;
-    font-size: 1.2em;
+    font-weight: 400;
+    font-size: 1.4em;
+    letter-spacing: 0.1em;
 }

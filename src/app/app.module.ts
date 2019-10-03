@@ -8,7 +8,6 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SearchComponent } from './search/search.component';
-import { DetailsComponent } from './details/details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Modules
@@ -23,7 +22,6 @@ import { SwapiService } from './swapi.service';
     AppComponent,
     DashboardComponent,
     SearchComponent,
-    DetailsComponent,
   ],
   imports: [
     BrowserModule,
